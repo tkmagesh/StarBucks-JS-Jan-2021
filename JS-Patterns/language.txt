@@ -49,6 +49,24 @@ this context
     it doesnot matter where the function is or who owns the function
     what matters is 'HOW the function is invoked'
 
+    If a funtion is invoked 
+        As a method of an object (obj)
+            this -> obj
+
+        As a function    
+            this -> global (window)
+
+    //apply, bind, call -> default methods available to any function
+
+        Using the 'call' method of the function
+
+        Using the 'apply' method of the function
+
+        Immediate invoked function expression (IIFE)
+
+        
+
+
 
 
 
