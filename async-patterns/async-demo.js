@@ -45,13 +45,24 @@
         return p;
     }
 
+    
+
+    /* 
     function addAsyncPromiseClient(x,y){
         console.log(`[@client] invoking the service`);
         var p = addAsyncPromise(10,20);
         p.then(function(result){
             console.log(`[@client] result = ${result}`);
         });
+    } 
+    */
+
+    async function addAsyncPromiseClient(x,y){
+        console.log(`[@client] invoking the service`);
+        const result = await addAsyncPromise(x,y);
+        console.log(`[@client] result = ${result}`);
     }
+
 
     window['addAsyncPromiseClient'] = addAsyncPromiseClient;
 
