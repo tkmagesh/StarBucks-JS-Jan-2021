@@ -29,7 +29,7 @@ spinner.down() //=> 0
 spinner.down() //=> -1
 
 
-The following should not be possible
+//The following should not be possible
 
 spinner.counter = 1000;
 spinner.up() //=> 1001
