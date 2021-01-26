@@ -162,3 +162,6 @@ for(var index = 0, count = nos.length; index < count; index++)
 
 for(let no of nos)
     console.log(no)
+
+
+/* http://es6-features.org */
