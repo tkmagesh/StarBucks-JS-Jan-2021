@@ -1,0 +1,54 @@
+JavaScript
+    dynamic
+    loosely typed
+    functional
+
+Dynamic
+C#
+class Employee{
+    public int id;
+    public string name;
+    public string city;
+}
+
+Employee emp = new Employee();
+emp.id = 101;
+emp.name = "Magesh"
+emp.city = "Bengaluru"
+
+emp.dept = "Sales & Marketing"
+
+loosely typed
+C#
+int i = 0;
+i = "string"
+
+var x = "asfldas;f"; //Implicity Typed Local Variables
+
+
+JS
+var i;
+i = 10;
+i = "safsda";
+i = true
+
+functional
+    functions as the first class citizens
+    functions can be treated like data
+
+    functions can be created like objects
+    functions can have attributes like objects
+    functions can have methods like objects
+    functions can be passed as arguments to other functions
+    functions can be returned as return value from other functions
+
+    functions are objects (callable objects)
+
+
+this context
+    it doesnot matter where the function is or who owns the function
+    what matters is 'HOW the function is invoked'
+
+
+
+
