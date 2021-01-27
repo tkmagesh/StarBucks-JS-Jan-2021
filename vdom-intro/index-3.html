@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VDOM Intro</title>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+    <script type="text/babel">
+        //(() => {
+            
+            var counter = 0;
+
+            function onBtnRenderClick(){
+                ++counter;
+                //JSX - JavaScript in XML format
+                var appEle = (
+                    <div>
+                        <h1>Welcome to React!</h1>
+                        <div>
+                            <span>Counter :</span>
+                            <span>{counter}</span>
+                        </div>
+                    </div>
+                );
+
+                ReactDOM.render(appEle, document.getElementById('root'));
+            }
+            
+            function onDocumentLoad(){
+                var btnRender = document.getElementById('btnRender');
+                btnRender.addEventListener('click', onBtnRenderClick);
+            }
+            window.addEventListener('load', onDocumentLoad);
+        //})();
+    </script>
+</head>
+<body>
+    <input type="button" value="Render" id="btnRender">
+    <div id="root"></div>
+</body>
+</html>
