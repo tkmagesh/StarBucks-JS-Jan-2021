@@ -50,9 +50,9 @@
                         <h1>Greeter</h1>
                         <hr/>
                         <label htmlFor="">User Name :</label>
-                        <input type="text" id="txtUserName" onChange={this.onTxtUserNameChange}/>
-                        <input type="button" id="btnGreet" value="Greet" onClick={this.onBtnGreetClick}/>
-                        <div id="divMessage" className="highlight">{this.state.message}</div>
+                        <input type="text"  onChange={this.onTxtUserNameChange}/>
+                        <input type="button"  value="Greet" onClick={this.onBtnGreetClick}/>
+                        <div className="highlight">{this.state.message}</div>
                     </div>
                 )    
             }
