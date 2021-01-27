@@ -14,14 +14,8 @@
                 newProductName : ''
             };
 
-            onTxtProductNameChange = (evt) => {
-                this.setState({
-                    newProductName : evt.target.value
-                });
-            }
-
-            onBtnAddProductClick = () => {
-                const { productNames, newProductName } = this.state;
+            onNewProductAdded = (newProductName) => {
+                const { productNames} = this.state;
                 const updatedProductNames = [ ...productNames, newProductName ];
                 this.setState({
                     productNames : updatedProductNames
@@ -29,20 +23,49 @@
             }
 
             render(){
-                const productItems = this.state.productNames.map(
-                    (productName,idx) => (<li key={idx}>{productName}</li>)
-                );
                 return(
                     <div>
                         <h1>Products</h1>
                         <hr/>
+                        <NewProduct onProductAdded={this.onNewProductAdded} />
+                        <ProductList data={this.state.productNames} />
+                    </div>
+                )
+            }
+        }
+
+        class NewProduct extends React.Component {
+            state = {
+                newProductName: ''
+            };
+            onTxtProductNameChange = (evt) => {
+                this.setState({
+                    newProductName: evt.target.value
+                });
+            }
+            onBtnAddProductClick = () => {
+                this.props.onProductAdded(this.state.newProductName);
+            }
+            render(){
+                return(
+                    <div>
                         <label>Product Name : </label>
                         <input type="text" onChange={this.onTxtProductNameChange} />
                         <input type="button" value="Add Product" onClick={this.onBtnAddProductClick} />
-                        <ol>
-                           {productItems}
-                        </ol>
                     </div>
+                )
+            }
+        }
+
+        class ProductList extends React.Component {
+            render(){
+                const productItems = this.props.data.map(
+                    (productName, idx) => (<li key={idx}>{productName}</li>)
+                );
+                return(
+                    <ol>
+                        {productItems}
+                    </ol>
                 )
             }
         }
