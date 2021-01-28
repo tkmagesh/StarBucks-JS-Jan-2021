@@ -1,0 +1,100 @@
+BDD
+    Behavior Driven Development
+
+3 Amigos
+    The Product Owner
+        Define the product
+        Define the features
+
+    The Tester
+
+    The Developers
+
+Examples
+    Describes how the software is intended to behave
+    illustrate a particular business rule or requirement
+
+10 Add 20 = 30
+10 Subtract 20 = -10
+10.3 Add 20.5 = 30.8
+
+BDD is example based
+BDD is not solely a testing technique
+
+Advantages
+    Collbaration
+    Everyone speaks the same language
+    Breakdown
+    Shared understanding
+    Examples can be used as executable artifacts that drive test automation
+
+DSL - Domain Specific Language
+Gherkin
+
+
+Unit Test
+    Arrange
+    Act
+    Assert
+
+
+Scenario for the withdraw feature of an ATM
+
+Feature: Withdraw Money
+    A customer should be able to withdraw cash from the ATM at any given time
+
+    Scenario: Withdraw cash with money available
+    Given I have sufficient funds in my account
+    When I select the withdraw option
+    And mention the amount to withdraw
+    Then I should get cash
+    And the funds in my account are adjusted
+
+
+Tests
+
+requirement document
+    identified by unique ids
+
+Tests
+    Tests are mapped to the corresponding requirement
+
+Cucumber
+    tool that can be used to execute Gherkin Statements
+    It works in the following steps:
+        It reads each line of the Gherkin document
+        Validates the Gherkin syntax
+        Maps the Gherkin statements to tests
+        Executes the tests
+        It confirms the feature implementation to be successful based on the outcome of the tests
+
+
+Tests
+    Tool to simulate end user actions on a web application
+        Selenium
+        WebDriver
+        Protractor
+        cypress
+
+cy.visit(myPage)
+    .get('#txtN1')
+    .type('Magesh')
+
+cy.get('#btnGreet')
+    .click()
+
+cy.get('#divMessage')
+    .should('contain', expectedMessage)
+
+
+assert()
+expect()
+should()
+
+
+assert.areEqual(actualResult,expectedResult)
+
+expect(actualResult).toEqual(expectedResult)
+
+actualResult.should.equal(expectedResult)
+
