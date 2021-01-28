@@ -207,3 +207,6 @@ Plugins
         npm install html-webpack-plugin --save-dev
         add the plugin in the config file
         
+
+Using the webpack-dev-server for development
+    npm install webpack-dev-server --save-dev
