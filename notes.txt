@@ -172,3 +172,15 @@ npx webpack
 for handling images use 'file-loader'
 npm install file-loader --save-dev
 update the config to use the file-loader
+
+component = presentation (JSX) + UI Behavior + state
+npm install style-loader css-loader --save-dev
+update the config to use the style-loader and css-loader
+
+Using babel
+npm install @babel/core babel-loader @babel/preset-env --save-dev
+
+    For react applications
+    npm install @babel/preset-react --save-dev
+    modify the config file to include the @babel/preset-react in the babel-loader 
+    
