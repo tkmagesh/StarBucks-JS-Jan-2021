@@ -1,8 +1,10 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
     entry : './src/index.js',
     output : {
-        filename : 'bundle.js',
+        filename : 'bundle.[contenthash].js',
         path : path.resolve(__dirname, './dist')
     },
     mode : 'development', // 'none' , 'development', 'production'
@@ -26,5 +28,8 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    plugins : [
+        new CleanWebpackPlugin()
+    ]
 }
