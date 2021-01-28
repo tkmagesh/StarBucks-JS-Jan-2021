@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+    <script type="text/babel">
+        class Calculator extends React.Component {
+            state = {
+                n1 : 0, 
+                n2 : 0,
+                result : 0
+            }
+            onBtnAddClick = () => {
+                const { n1, n2 } = this.state;
+                const result = n1 + n2;
+                this.setState({ result : result });
+            }
+            render(){
+                const { result } = this.state;
+                return(
+                    <div>
+                        <input type="number" id="txtN1" onChange={ evt => this.setState({n1 : parseInt(evt.target.value)})} />
+                        <input type="number" id="txtN2" onChange={ evt => this.setState({n2 : parseInt(evt.target.value)})} />
+                        <input type="button" id="btnAdd" value="Add" onClick={this.onBtnAddClick}/>
+                        <div id="divResult">{result}</div>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(<Calculator/>, document.getElementById('root'))
+    </script>
+</head>
+<body>
+    <div id="root">
+        
+    </div>
+</body>
+</html>
