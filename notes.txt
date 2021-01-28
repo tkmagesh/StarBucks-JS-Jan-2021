@@ -201,3 +201,9 @@ Plugins
         modify the config file to include the plugin
         and update the loader to use the plugin loader instead of 'style-loader'
     
+    HtmlWebpackPlugin
+        create a new html page for the build in the 'dist' folder
+            and update the references to the generated js and css files 
+        npm install html-webpack-plugin --save-dev
+        add the plugin in the config file
+        
