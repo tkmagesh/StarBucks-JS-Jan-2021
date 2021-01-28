@@ -1,7 +1,7 @@
 
 /* import sayHello from './helloWorld';
-//import displayImage from './displayImage';
-import displayHeading from './heading/header' */
+//import displayImage from './displayImage';*/
+import displayHeading from './heading/header' 
 
 /* sayHello();
 displayHeading(); */
@@ -11,5 +11,6 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import ReactHello from './react-hello/react-hello';
 console.log('Hi there.....!');
+displayHeading();
 ReactDOM.render(<ReactHello/>, document.getElementById('root'));
 

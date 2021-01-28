@@ -190,3 +190,14 @@ Plugins
     CleanWebpackPlugin
         clear the existing contents of the './dist' folder everytime a new build is created
         npm install clean-webpack-plugin --save-dev
+
+    Terser
+        minify & uglify javascript files
+        By default including included in webpack and kicks in when the mode = "production"
+
+    MiniCssExtractPlugin
+        will extract the css contents from all the files in the app and create on css file for deployment
+        npm isntall mini-css-extract-plugin --save-dev
+        modify the config file to include the plugin
+        and update the loader to use the plugin loader instead of 'style-loader'
+    
