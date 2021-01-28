@@ -5,5 +5,13 @@ module.exports = {
         filename : 'bundle.js',
         path : path.resolve(__dirname, './dist')
     },
-    mode : 'none' // 'none' , 'development', 'production'
+    mode : 'none', // 'none' , 'development', 'production'
+    module : {
+        rules : [
+            {
+                test : /\.(png|jpg)$/,
+                use : [ 'file-loader' ]
+            }
+        ]
+    }
 }
