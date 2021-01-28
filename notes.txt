@@ -98,3 +98,73 @@ expect(actualResult).toEqual(expectedResult)
 
 actualResult.should.equal(expectedResult)
 
+webpack
+
+script1.js
+script2.js
+script3.js
+
+AMD - Asynchronous Module Definition
+require.js
+
+script1.js
+-----------
+require([], function(){
+    var x = 10;
+    function fn(){
+
+    };
+    return x;
+})
+
+script2.js
+-----------
+require(['script1', 'script3'], function(x, y){
+
+})
+
+Build process
+    Grunt
+        Task Runner
+
+    Gulp
+    script1 + script2 + script3 = main.js
+
+    webpack
+
+1. ES6 to ES5
+2. minify the JS files
+3. uglify the JS files
+4. bundle the JS files
+5. version the JS file
+6. use CSS preprocessing
+7. minify the css files
+8. bundle the css files
+9. version the css file
+10. update the references of the bundled js and css files in the index.html
+11. minify the html page
+
+bundle.30ouiwejl0823.js R-1
+
+after 2 months
+
+bundle.dsfjkswerwpqr.js R-2
+
+SCSS
+SASS
+Less
+Compass
+
+
+@borderColor = 'blue'
+h1{
+    border-color : @borderColor;
+}
+
+h2{
+    border-color : @borderColor;
+}
+
+webpack setup
+npm install webpack webpack-cli --save-dev
+npx webpack

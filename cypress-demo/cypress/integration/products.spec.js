@@ -1,6 +1,7 @@
 describe('Products', () =>{
 
     beforeEach(() => {
+        //Given
         cy.visit('products.html');
     });
 
@@ -9,12 +10,13 @@ describe('Products', () =>{
     });
 
     it('should display the added product', () =>{
+        //When
         cy.get('input[type="text"]')
             .type('Pen');
-
+        //When
         cy.get('input[value="Add Product"]')
             .click();
-
+        //Then
         cy.get('ol > li:last-child')
             .should('contain', 'Pen')
     })
